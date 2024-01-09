@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "front": "フラッシュカードの表面テキスト",
+    "back": "裏面のテキスト",
+    "category": "数学",
+    "subCategory": "代数学"
+  },
+  {
+    "id": 2,
+    "front": "別のカードの表面テキスト",
+    "back": "裏面のテキスト",
+    "category": "物理学",
+    "subCategory": "力学"
+  },
+  {
+    "id": 3,
+    "front": "フラッシュカードの表面テキスト",
+    "back": "裏面のテキスト",
+    "category": "数学",
+    "subCategory": "代数学"
+  },
+  {
+    "id": 4,
+    "front": "別のカードの表面テキスト",
+    "back": "裏面のテキスト",
+    "category": "物理学",
+    "subCategory": "力学"
+  },
+  {
+    "id": 5,
+    "front": "フラッシュカードの表面テキスト",
+    "back": "裏面のテキスト",
+    "category": "数学",
+    "subCategory": "代数学"
+  },
+  {
+    "id": 6,
+    "front": "別のカードの表面テキスト",
+    "back": "裏面のテキスト",
+    "category": "物理学",
+    "subCategory": "力学"
+  }
+]
