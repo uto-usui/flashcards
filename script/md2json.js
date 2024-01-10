@@ -25,11 +25,6 @@ const markdownToJSON = (markdownFilePath) => {
   const back = parts[1].trim()
   const description = parts[2].trim()
 
-  console.log('parts', parts)
-  console.log('front', front)
-  console.log('back', back)
-  console.log('description', description)
-
   const [category, subCategory, cardName] = markdownFilePath
     .split(path.sep)
     .slice(-3)
