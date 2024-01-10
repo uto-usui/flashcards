@@ -1,6 +1,7 @@
 'use client'
 import type { FC } from 'react'
 import { useState } from 'react'
+import { CardContent } from '@/components/CardContent'
 
 export type CardProps = {
   front: string
@@ -26,15 +27,11 @@ const Card: FC<CardProps> = ({ front, back, onFlip }) => {
 
   return (
     <button
-      className="relative flex w-full border-4 border-solid border-black"
+      className="relative flex w-full border-4 border-solid border-black p-4 shadow-lg"
       onClick={handleFlip}
     >
-      <div className={`w-full transition-transform ${isFlipped ? 'hidden' : ''}`}>
-        <div className="bg-blue-500 p-4 text-center text-white shadow-lg">{front}</div>
-      </div>
-      <div className={`w-full transition-transform ${!isFlipped ? 'hidden' : ''}`}>
-        <div className="bg-green-500 p-4 text-center text-white shadow-lg">{back}</div>
-      </div>
+      <CardContent isShow={isFlipped} text={front} />
+      <CardContent isShow={!isFlipped} text={back} />
     </button>
   )
 }
