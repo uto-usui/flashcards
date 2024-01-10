@@ -7,7 +7,7 @@ interface PageTitleProps {
 }
 
 const PageTitle: FC<PageTitleProps> = (props: PageTitleProps) => {
-  return <h1 className="text-2xl font-bold">{props.category}</h1>
+  return <h1 className="text-5xl">{props.category}</h1>
 }
 
 export default PageTitle
