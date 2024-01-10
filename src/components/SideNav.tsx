@@ -13,7 +13,7 @@ export function SideNav() {
     }
   })
   return (
-    <nav className="w-full bg-black text-white">
+    <nav className="w-full bg-black capitalize text-white">
       {Array.from(categoryMap.keys()).map((category) => (
         <div key={category}>
           <Link href={`/category/${encodeURIComponent(category)}`}>
