@@ -2,6 +2,7 @@
   "name": "flashcard-app",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@8.6.12",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,7 +20,7 @@
     "@types/node": "20.5.1",
     "@types/react": "18.2.47",
     "@types/react-dom": "18.2.18",
-    "@types/react-katex": "^3.0.4",
+    "@types/react-katex": "3.0.4",
     "@typescript-eslint/eslint-plugin": "6.18.1",
     "@typescript-eslint/parser": "6.18.1",
     "autoprefixer": "10.4.16",
@@ -31,7 +32,7 @@
     "eslint-plugin-tailwindcss": "3.13.1",
     "postcss": "8.4.33",
     "prettier": "3.1.1",
-    "react-katex": "^3.0.1",
+    "react-katex": "3.0.1",
     "tailwindcss": "3.4.1",
     "typescript": "5.3.3"
   }
