@@ -12,7 +12,7 @@ export default function CategoryPage({
   const { filteredCards } = useCategory({ category, subCategory })
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="flex flex-col gap-8">
       <PageTitle category={category} />
       <CardList cards={filteredCards} />
     </div>
