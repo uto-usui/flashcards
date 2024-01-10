@@ -1,14 +1,22 @@
 'use client'
+import type { FC } from 'react'
 import { useState } from 'react'
 
-type CardProps = {
+export type CardProps = {
   front: string
   back: string
   onFlip?: () => void
 }
 
-// components/Card.tsx
-const Card: React.FC<CardProps> = ({ front, back, onFlip }) => {
+export interface Card {
+  id: number
+  front: string
+  back: string
+  category: string
+  subCategory?: string
+}
+
+const Card: FC<CardProps> = ({ front, back, onFlip }) => {
   const [isFlipped, setIsFlipped] = useState(false)
 
   const handleFlip = () => {
