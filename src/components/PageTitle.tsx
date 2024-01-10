@@ -7,7 +7,13 @@ interface PageTitleProps {
 }
 
 const PageTitle: FC<PageTitleProps> = (props: PageTitleProps) => {
-  return <h1 className="text-5xl">{props.category}</h1>
+  const { subCategory, category } = props
+
+  return (
+    <h1 className="text-3xl font-bold uppercase sm:text-5xl">
+      {category} {subCategory !== undefined && `/ ${subCategory}`}
+    </h1>
+  )
 }
 
 export default PageTitle

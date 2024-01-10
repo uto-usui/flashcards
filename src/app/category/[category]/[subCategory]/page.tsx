@@ -13,7 +13,7 @@ export default function CategoryPage({
 
   return (
     <div className="flex flex-col gap-8">
-      <PageTitle category={category} />
+      <PageTitle category={category} subCategory={subCategory} />
       <CardList cards={filteredCards} />
     </div>
   )
