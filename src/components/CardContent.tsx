@@ -21,12 +21,13 @@ export const CardContent: FC<CardContentParams> = (props) => {
   const { isShow, text, description } = props
 
   return (
-    <div className={`relative z-10 w-full ${isShow ? 'hidden' : ''}`}>
-      {renderMath(text)}
+    <div className={`w-full ${isShow ? 'hidden' : ''}`}>
+      <p>{renderMath(text)}</p>
 
       {description !== undefined && (
-        <details className={'relative z-20'}>
+        <details className={'inline-block'}>
           <summary
+            className={'text-sm'}
             onClick={(e) => {
               e.stopPropagation()
             }}
