@@ -1,14 +1,13 @@
-// components/CardList.tsx
 import Card from './Card'
 import type { FC } from 'react'
 
-type CardData = {
-  id: number
+interface CardData {
+  id: string
   front: string
   back: string
 }
 
-type CardListProps = {
+interface CardListProps {
   cards: CardData[]
 }
 

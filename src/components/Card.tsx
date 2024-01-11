@@ -10,11 +10,12 @@ export type CardProps = {
 }
 
 export interface Card {
-  id: number
+  id: string
   front: string
   back: string
   category: string
   subCategory?: string
+  description?: string
 }
 
 const Card: FC<CardProps> = ({ front, back, onFlip }) => {
