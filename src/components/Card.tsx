@@ -6,6 +6,7 @@ import { CardContent } from '@/components/CardContent'
 export type CardProps = {
   front: string
   back: string
+  description?: string
   onFlip?: () => void
 }
 
@@ -18,7 +19,7 @@ export interface Card {
   description?: string
 }
 
-const Card: FC<CardProps> = ({ front, back, onFlip }) => {
+const Card: FC<CardProps> = ({ front, back, description, onFlip }) => {
   const [isFlipped, setIsFlipped] = useState(false)
 
   const handleFlip = () => {
@@ -32,7 +33,7 @@ const Card: FC<CardProps> = ({ front, back, onFlip }) => {
       onClick={handleFlip}
     >
       <CardContent isShow={isFlipped} text={front} />
-      <CardContent isShow={!isFlipped} text={back} />
+      <CardContent isShow={!isFlipped} text={back} description={description} />
     </button>
   )
 }

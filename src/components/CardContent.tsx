@@ -4,6 +4,7 @@ import { InlineMath } from 'react-katex'
 export interface CardContentParams {
   isShow: boolean
   text: string
+  description?: string
 }
 
 const renderMath = (text: string) => {
@@ -17,7 +18,24 @@ const renderMath = (text: string) => {
 }
 
 export const CardContent: FC<CardContentParams> = (props) => {
-  const { isShow, text } = props
+  const { isShow, text, description } = props
 
-  return <div className={`w-full ${isShow ? 'hidden' : ''}`}>{renderMath(text)}</div>
+  return (
+    <div className={`relative z-10 w-full ${isShow ? 'hidden' : ''}`}>
+      {renderMath(text)}
+
+      {description !== undefined && (
+        <details className={'relative z-20'}>
+          <summary
+            onClick={(e) => {
+              e.stopPropagation()
+            }}
+          >
+            くわしく
+          </summary>
+          {renderMath(description)}
+        </details>
+      )}
+    </div>
+  )
 }
